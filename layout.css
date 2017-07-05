@@ -1,0 +1,552 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ /* ------------------ Fonts ------------------ */ 
+@font-face {
+    src: url("fonts/AllerDisplay.ttf");
+    font-family:Aller;
+}
+@font-face {
+    src: url("fonts/BebasNeue-Regular.otf");
+    font-family: BebasNeue;
+}
+@font-face {
+    src: url("fonts/Carosello-Regular.otf");
+    font-family: Carosello;
+}
+@font-face {
+    src: url("fonts/LeagueGothic-CondensedRegular.otf");
+    font-family: League;
+}
+@font-face {
+    src: url("fonts/Butler_Regular.otf");
+    font-family: Butler;
+}
+@font-face {
+    src: url("fonts/Montserrat-Regular.ttf");
+    font-family: Montserrat-Regular;
+}
+@font-face {
+    src: url("fonts/PT_Serif-Web-Italic.ttf");
+    font-family: PT_Serif-Web-Italic;
+}
+@font-face {
+    src: url("fonts/PT_Serif-Web-Italic.ttf");
+    font-family: PT_Serif-Web-Regular;
+}
+@font-face {
+    src: url("fonts/OpenSans-Regular.ttf");
+    font-family: OpenSans-Regular;
+}
+
+/*------------------ header ------------------*/
+
+.header {
+    background-image: url('images/mountain.jpg');
+    background-size: cover;
+    height: 900px;
+    position: relative;
+    -webkit-clip-path: polygon(100% 0, 100% 75%, 50% 95%, 0 75%, 0 0);
+    clip-path: polygon(100% 0, 100% 75%, 50% 95%, 0 75%, 0 0);
+    clip-path: url(#cat); /*fixfirefox*/
+}
+.layer1 {
+    height: 900px;
+    background-color: rgba(32, 52, 85, 0.84);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+/*----- layer2 -----*/
+.layer2 {
+    position: absolute;
+    width: 100%;
+    height: 900px;
+}
+.menunav nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
+    background: transparent;
+    padding-right: 0
+}
+.mnphai nav.navbar.navbar-toggleable-md.navbar-light.bg-faded {
+    padding-left: 125px;
+}
+.menunav .col-sm-5 {
+    padding-top: 60px;
+}
+.menunav .mntrai a.nav-link {
+    padding-right: 40px;
+    font-family: BebasNeue;
+    font-size: 25px;
+    color: white;
+}
+.menunav .mnphai a.nav-link {
+    padding-left: 45px;
+    font-family: BebasNeue;
+    font-size: 25px;
+    color: white;
+}
+.menunav .col-sm-2 {
+    padding-left: 0px;
+}
+.layer2 h3 {
+    font-size: 35px;
+    font-family: Butler;
+    color: white;
+    padding-left: 45px;
+}
+
+.layer2 .chu h3 {
+    font-family: Carosello;
+    text-align: center;
+    font-size: 40px;
+    padding-top: 40px;
+}
+.layer2 .chu h1 {
+    text-align: center;
+    color: white;
+    font-family: Aller;
+    font-size: 100px;
+    padding-top: 15px;
+    letter-spacing: 8px;
+    display: block;
+    padding-left: 85px;
+}
+.layer2 .chu img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nut .btn.btn-outline-secondary {
+    text-transform: uppercase;
+    padding: 20px 60px;
+    font-family: Montserrat-Regular, sans-serif;
+}
+.nut.container {
+    padding-top: 30px;
+}
+.nut .btn.btn-outline-secondary:hover {
+    color: rgba(13, 40, 105, 0.82);
+    background: rgba(255, 255, 255, 0.55);
+    border:none;
+}
+/*------------------ Program ------------------*/
+.tieude {
+    padding-bottom: 30px;
+}
+.tieude p {
+    font-family: PT_Serif-Web-Italic, sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    font-weight: 400;
+    color: #b2b2b2;
+    letter-spacing: 4px;
+}
+.tieude h1 {
+    font-family: League;
+    font-size: 129px;
+    letter-spacing: 20px;
+    color: #182a44;
+}
+.slide {
+    padding-top: 5px;
+}
+.nutbam a.carousel-control-prev {
+    background: url('images/btn-le.png') no-repeat;
+    background-position: center left;
+    transform: translateX(-45px) translateY(-10px);
+}
+.nutbam a.carousel-control-next {
+    background: url('images/btn-ri.png') no-repeat;
+    background-position: center right;
+    transform: translateX(45px) translateY(-10px);
+}
+
+.gallery .motkhung img {
+    clip-path: url(#hinhvuong);
+    display:block;
+    width:300px;
+    height:200px;
+    margin:5px;
+    transition:opacity 0.26s ease-out;
+    transition:500ms;
+}
+.motkhung {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+.motkhung .chunho {
+    position:absolute;
+    opacity:0;
+    top:50%;
+    left:-8%;
+    padding:5px;
+    text-align:center;
+    width:118%;
+    z-index:3;
+    background:rgba(255,255,255, 0.7);
+    transition:1s;
+    font-size:20px;
+    line-height:20px;
+    margin-top:-10px;
+
+}
+.gallery:hover img {
+    opacity:0.5;
+}
+.gallery:hover .motkhung:hover img {
+    opacity:1;
+    /*-webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);*/
+    transform: scale(1.5);
+    z-index:2;
+    position:relative;
+    transition:500ms;
+}
+.motkhung:hover .chunho {
+    opacity :1;
+}                   
+.timeline {
+    font-family: OpenSans-Regular, sans-serif;
+}
+.timeline ul.hanhtrinh {
+    list-style: none;
+    position: absolute;
+    top: 1520px;
+    left: 50%;
+    transform: translate(-50%, -8%);
+    padding: 1px 100px;
+    color: #bbb5b5;
+    font-size: 13px;
+}
+.timeline ul.hanhtrinh:before {
+    content: '';
+    width: 1px;
+    height: 100%;
+    position: absolute;
+    border-left: 2px dashed #8a5050;
+}
+.timeline ul.hanhtrinh li.thoigian {
+    position: relative;
+    margin-left: 30px;
+    background-color: rgba(255, 255, 255, 0.35);
+    padding: 14px;
+    border-radius: 6px;
+    width: 250px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, .12), 0 2px 2px rgba(0, 0, 0, .08)
+}
+.timeline ul.hanhtrinh li.thoigian:not(:first-child) {
+    margin-top: 45px;
+}
+.timeline .hanhtrinh .thoigian > span {
+    width: 3px;
+    height: 100%;
+    background-color: #b9babb;
+    left: -30px;
+    top: 0;
+    position: absolute;
+}
+.timeline .hanhtrinh .thoigian > span:before, .timeline .hanhtrinh .thoigian > span:after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    background: #86b7e7;
+    left: -3px;
+    top: 0;
+}
+.timeline .hanhtrinh .thoigian span:after {
+    top: 100%;
+}
+.timeline .hanhtrinh .thoigian > .news {
+    margin-left: 10px;
+    color: #1313b9;
+}
+.timeline .news .title, .timeline .news .type {
+    font-weight: 600;
+    font-size: 12px;
+    color: #31a9bd;
+}
+.timeline .news .info {
+    font-weight: 300;
+}
+.timeline div > div {
+    margin-top: 5px;
+}
+.timeline span.ngay {
+    height: 100%;
+}
+.timeline span.ngay span {
+    position: absolute;
+    font-size: 12px;
+    left: -55px;
+    font-weight: bold;
+}
+.timeline span.ngay span:first-child {
+    top: 0;
+}
+.timeline span.ngay span:last-child {
+    top: 100%;
+}
+.anhnen {
+    background-image: url(images/bgtr.png);
+    background-size: cover;
+    height: 425px;
+}
+.maunen {
+    background: rgba(255,255,255,0.55);
+    background: -moz-linear-gradient(top, rgba(255,255,255,0.55) 60%, rgba(254,254,254,0.55) 61%, rgba(246,246,246,0.84) 74%, rgba(252,252,252,1) 81%, rgba(255,255,255,1) 84%);
+    background: -webkit-gradient(left top, left bottom, color-stop(60%, rgba(255,255,255,0.55)), color-stop(61%, rgba(254,254,254,0.55)), color-stop(74%, rgba(246,246,246,0.84)), color-stop(81%, rgba(252,252,252,1)), color-stop(84%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,0.55) 60%, rgba(254,254,254,0.55) 61%, rgba(246,246,246,0.84) 74%, rgba(252,252,252,1) 81%, rgba(255,255,255,1) 84%);
+    background: -o-linear-gradient(top, rgba(255,255,255,0.55) 60%, rgba(254,254,254,0.55) 61%, rgba(246,246,246,0.84) 74%, rgba(252,252,252,1) 81%, rgba(255,255,255,1) 84%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,0.55) 60%, rgba(254,254,254,0.55) 61%, rgba(246,246,246,0.84) 74%, rgba(252,252,252,1) 81%, rgba(255,255,255,1) 84%);
+    background: linear-gradient(to bottom, rgba(255,255,255,0.55) 60%, rgba(254,254,254,0.55) 61%, rgba(246,246,246,0.84) 74%, rgba(252,252,252,1) 81%, rgba(255,255,255,1) 84%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+    height: 425px;
+    width: 100%;
+
+}
+/*------------------ Challenge ------------------*/
+.challenge {
+    background-image: url('images/bg2.jpg');
+    background-size: cover;
+    height: 925px;
+    -webkit-clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+    clip-path: polygon(0 0, 100% 25%, 100% 100%, 0 75%);
+    clip-path: url(#hinhbinhhanh);
+    position: relative;
+    background-attachment: fixed;
+}
+.colorbg {
+    background: rgba(3,7,54,0.9);
+    background: -moz-linear-gradient(top, rgba(3,7,54,0.9) 11%, rgba(4,7,59,0.9) 14%, rgba(14,12,120,0.8) 51%, rgba(3,7,54,0.71) 83%, rgba(3,7,54,0.71) 84%);
+    background: -webkit-gradient(left top, left bottom, color-stop(11%, rgba(3,7,54,0.9)), color-stop(14%, rgba(4,7,59,0.9)), color-stop(51%, rgba(14,12,120,0.8)), color-stop(83%, rgba(3,7,54,0.71)), color-stop(84%, rgba(3,7,54,0.71)));
+    background: -webkit-linear-gradient(top, rgba(3,7,54,0.9) 11%, rgba(4,7,59,0.9) 14%, rgba(14,12,120,0.8) 51%, rgba(3,7,54,0.71) 83%, rgba(3,7,54,0.71) 84%);
+    background: -o-linear-gradient(top, rgba(3,7,54,0.9) 11%, rgba(4,7,59,0.9) 14%, rgba(14,12,120,0.8) 51%, rgba(3,7,54,0.71) 83%, rgba(3,7,54,0.71) 84%);
+    background: -ms-linear-gradient(top, rgba(3,7,54,0.9) 11%, rgba(4,7,59,0.9) 14%, rgba(14,12,120,0.8) 51%, rgba(3,7,54,0.71) 83%, rgba(3,7,54,0.71) 84%);
+    background: linear-gradient(to bottom, rgba(3,7,54,0.9) 11%, rgba(4,7,59,0.9) 14%, rgba(14,12,120,0.8) 51%, rgba(3,7,54,0.71) 83%, rgba(3,7,54,0.71) 84%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#030736', endColorstr='#030736', GradientType=0 );
+    width: 100%; 
+    height: 925px;
+    position: absolute;
+}
+.noidung {
+    position: absolute;
+    top: 25%; 
+}
+.noidung .col-sm-12.text-sm-center {
+    padding-top: 200px;
+    padding-bottom: 40px
+}
+.noidung .col-sm-12 p {
+    color: white;
+    font-family: PT_Serif-Web-Italic, sans-serif;
+    font-style: italic;
+    letter-spacing: 3px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.noidung .col-sm-12 h2 {
+    color: white;
+    font-family: League;
+    font-size: 120px;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+}
+.vong3 h3 {
+    border: 1px solid;
+    color: #ffffff;
+    text-align: center;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    padding-top: 35px;
+    font-family: Aller;
+}
+.thongso .col-sm-3 .vong2 {
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    height: 120px;
+    width: 120px;
+    padding: 8px;
+}
+.thongso .col-sm-3 .vong1 {
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    height: 140px;
+    width: 140px;
+    padding: 7px;
+}
+.thongso p {
+    margin-left: -40px;
+    margin-top: 20px;
+    color: #ffffff;
+    font-family: PT_Serif-Web-Regular, serif;
+}
+/*------------------ The Team ------------------*/
+.team {
+    background-image: url('images/bg3.jpg');
+    background-size: cover;
+    height: 700px;
+    position: relative;
+    padding-top: 28px;
+}
+.bgcolor2 {
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255,255,255,1);
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 39%, rgba(249,249,249,0.67) 57%, rgba(247,247,247,0.74) 64%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 91%);
+    background: -webkit-gradient(left top, left bottom, color-stop(39%, rgba(255,255,255,1)), color-stop(57%, rgba(249,249,249,0.67)), color-stop(64%, rgba(247,247,247,0.74)), color-stop(90%, rgba(255,255,255,1)), color-stop(91%, rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(top, rgba(255,255,255,1) 39%, rgba(249,249,249,0.67) 57%, rgba(247,247,247,0.74) 64%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 91%);
+    background: -o-linear-gradient(top, rgba(255,255,255,1) 39%, rgba(249,249,249,0.67) 57%, rgba(247,247,247,0.74) 64%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 91%);
+    background: -ms-linear-gradient(top, rgba(255,255,255,1) 39%, rgba(249,249,249,0.67) 57%, rgba(247,247,247,0.74) 64%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 91%);
+    background: linear-gradient(to bottom, rgba(255,255,255,1) 39%, rgba(249,249,249,0.67) 57%, rgba(247,247,247,0.74) 64%, rgba(255,255,255,1) 90%, rgba(255,255,255,1) 91%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=0 );
+}
+.tieude1 p {
+    font-family: PT_Serif-Web-Regular, serif;
+    font-style: italic;
+    color: #b2b2b2;
+    font-size: 26px;
+    letter-spacing: 5px;
+}
+.tieude1 h1 {
+    font-family: League;
+    color: #182a44;
+    font-size: 135px;
+    letter-spacing: 18px;
+    text-transform: uppercase;
+    padding-bottom: 46px;
+}
+/*------------------ Reviews ------------------*/
+.reviews {
+    background-image: url('images/bg4.jpg');
+    background-size: cover;
+    height: 1000px;
+    width: 100%;
+    position: relative;
+    -webkit-clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+    clip-path: url(#hinhbinhhanh2);
+    background-attachment: fixed;
+}
+.bgcolor3 {
+    background: rgba(0, 0, 255, 0.32);
+    width: 100%;
+    height: 1000px;
+}
+.layerchu {
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    padding-top: 170px;
+}
+.layerchu p {
+    color: white;
+    font-family:  PT_Serif-Web-Regular, serif;
+    font-style: italic;
+    font-size: 25px;
+    letter-spacing: 6px;
+}
+.layerchu h2 {
+    color: #ffffff;
+    font-family: League;
+    font-size: 125px;
+    text-transform: uppercase;
+    letter-spacing: 20px;
+}
+.layerchu .bntrai p {
+    color: white;
+    font-family: PT_Serif-Web-Italic, serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: normal;
+    border-left: 4px solid;
+    padding-left: 15px;
+}
+.motkhoi {
+    padding-bottom: 60px;
+}
+.bntrai h3 {
+    color: #ffffff;
+    font-family: Montserrat-Regular,sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+    padding-left: 8px;
+}
+.layerchu .col-sm-2 img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+.layerchu .col-sm-8 p {
+    padding-top: 18px;
+    text-transform: uppercase;
+    border: none;
+}
+.col-sm-6.bntrai.phai.text-sm-left {
+    padding-top: 140px;
+}
+/*------------------ Booking ------------------*/
+.booking {
+    padding-bottom: 80px;
+}
+.booking .chutd p {
+    color: #aaaaaa;
+    font-family:  PT_Serif-Web-Regular, serif;
+    font-size: 26px;
+    letter-spacing: 5px;
+    font-style: italic;
+}
+.booking .chutd h2 {
+    font-family: League;
+    font-size: 133px;
+    letter-spacing: 34px;
+    color: #182a44;
+}
+button.btn.btn-success.my-2.my-sm-0.nutnhan {
+    background: #182a44;
+    border-color: #182a44;
+    border-radius: 0;
+    padding: 20px;
+    font-family: Montserrat-Regular, sans-serif;
+}
+button.btn.btn-success.my-2.my-sm-0.nutnhan:hover {
+    background: #ffffff;
+    color: #182a44
+}
+input.form-control.mr-sm-2.chuform {
+    padding: 20px;
+    border-radius: 0;
+    color: #aaaaaa;
+    font-family: Montserrat-Regular, sans-serif;
+}
+.social i {
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 20px;
+    font-size: 28px;
+    border-color: #aaaaaa;
+    color: #aaaaaa;
+}
+.social i.fa.fa-facebook {
+    border: 2px solid;
+    border-radius: 50%;
+    padding: 19px 25px;
+    font-size: 30px;
+}
+.booking h4.text-sm-center {
+    padding: 60px 0 20px 0;
+    font-family: Montserrat-Regular, sans-serif;
+    color: #aaaaaa;
+}
