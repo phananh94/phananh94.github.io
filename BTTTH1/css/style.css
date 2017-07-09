@@ -1,0 +1,120 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a.td {
+    text-decoration: none;
+}
+/*------ wrap ------*/
+.wrap {
+	max-width: 1000px;
+	min-width: 300px;
+	margin: auto;
+}
+/*------ header ------*/
+img.banner {
+    width: 80%;
+    float: right;
+    height: 100px;
+}
+img.logo {
+    width: 20%;
+    height: 100px;
+}
+/*------ menu ------*/
+.menu {
+    margin-top: 15px;
+}
+.menu a {
+	text-decoration: none;
+	font-size: 20px;
+	padding: 14px 55px;
+	background: rgba(52, 152, 219, 0.54);
+	color: #ffffff;
+}
+.menu a:first-child {
+	color: #e74c3c;
+	font-weight: bold;
+}
+.menu a:hover {
+	background: transparent;
+	color: #27ae60;
+	font-weight: bold;
+	border: 2px solid #2980b9;
+	border-radius: 5px;
+}
+.menu a:focus {
+	color: #795548;
+}
+/*------ content ------*/
+.content {
+    margin-top: 80px;
+}
+.noidung {
+	width: 30%;
+	height: 400px;
+	margin: 0 16px;
+	float: left;
+	border: 2px solid #95a5a6;
+	border-radius: 20px;
+	border-bottom: 10px solid #37b993;
+	border-top: 30px solid #37b993;
+}
+.noidung img {padding: 20px 40px;}
+
+.noidung h3 {
+    padding: 0px 44px;
+
+}
+.noidung h4 {
+    margin-top: -19px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+.so2 {
+	border-color: #e67e22;
+}
+.so3 {
+	border-color: #2980b9;
+}
+.bentrai {
+	width: 35%;
+} 
+.phanduoi img {
+	margin-top: 30px;
+	height: 350px;
+	width: 350px;
+	border-radius: 50%;
+	clear: both;
+}
+.benphai {
+	width: 65%;
+	float: right;
+	margin-top: 30px;
+	padding: 10px;
+}
+.benphai h3 {
+    font-size: 30px;
+    padding: 15px 0;
+    color: #2c3e50;
+}
+.benphai p {
+    font-size: 18px;
+    font-family: arial;
+}
+
+.gallery {
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+.btren h3 {
+    font-size: 25px;
+    color: #2c3e50;
+    padding-bottom: 15px;
+}
+.btren img {
+    margin: 0 14px;
+}
